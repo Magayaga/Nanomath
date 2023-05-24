@@ -3,10 +3,13 @@
 #include <conio.h>  
 #include <stdlib.h>
 #include "color.c"
+#include "decimal.c"
 
 int main() {
     char nanomath;
     double num1, num2, result;
+    int decimal;
+    
 
     printf("                                 ._(+-*/)_.\n"); 
     white(); printf("----------------------------------"); resetColor(); purple(); printf("NANOMATH"); resetColor(); white(); printf("----------------------------------\n"); resetColor();
@@ -14,6 +17,7 @@ int main() {
     printf("(/) Division             (1) Sin                     (2) Cos\n");
     printf("(3) Tan                  (4) Log                     (5) Pow\n");
     printf("(6) Square Root          (7) Cube Root               (8) Exponentiation\n");
+    printf("(9) Decimal to Binary\n");
     white();
     printf("----------------------------------------------------------------------------\n");
     resetColor();
@@ -140,6 +144,14 @@ int main() {
             printf("exponential of %lf = %lf", num1, result);
             resetColor();
             break;
+        
+        case '9':
+            printf("Enter an number (decimal number): ");
+            scanf("%d", &decimal);
+            green();
+            decimalToBinary(decimal);
+            resetColor();
+            break;
 
         case 'q':
             exit(0);
@@ -148,7 +160,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(v1.0) / April 2, 2023\n");
+            printf("(v1.1) / May 24, 2023\n");
             printf("created and developed by Cyril John Magayaga\n");
             resetColor();
             break;
