@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "color.c"
 
 void decimalToBinary(int decimal) {
     int binary[32];

@@ -1,6 +1,6 @@
 # Nanomath
 
-**Nanomath** is a scientific calculator for Unix-like computing systems or operating environments using a **command line interface** or **text-based user interface**.
+**Nanomath** is a scientific calculator for cross-platform computing systems or operating environments using a **command line interface** or **text-based user interface** created and developed by Cyril John Magayaga.
 
 ## Getting Start
 
@@ -36,3 +36,7 @@ make
 # Open the application
 ./nanomath
 ```
+## License
+Copyright (c) Cyril John Magayaga. All rights reserved.
+
+Licensed under the [MIT License](LICENSE).
