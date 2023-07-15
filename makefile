@@ -2,6 +2,6 @@
 
 # Copyright 2023 Cyril John Magayaga
 
-nanomath:
+nanomath: 
+	$(CC) -o nanomath src/linux/nanomath.c -lm
 
- cc src/nanomath.c -o nanomath # Run the program

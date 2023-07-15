@@ -5,10 +5,34 @@
 ## Getting Start
 
 ### Windows
-`gcc src/nanomath.c -o nanomath`
+```shell
+# Download the Nanomath
+git clone https://github.com/Magayaga/Nanomath.git
 
-### Linux or macOS
-`make`
+# Change directory the Nanomath
+cd Nanomath
 
-### Open the Application
-`./nanomath`
+# Run the program
+gcc src/win/nanomath.c -o nanomath.exe
+
+# Open the application
+./nanomath
+```
+
+### Linux
+```shell
+# Download the Nanomath
+git clone https://github.com/Magayaga/Nanomath.git
+
+# Change directory the Nanomath
+cd Nanomath
+
+# Run the program (gcc)
+gcc src/linux/nanomath.c -o nanomath -lm
+
+# or (makefile)
+make
+
+# Open the application
+./nanomath
+```
