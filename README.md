@@ -1,6 +1,11 @@
-# Nanomath
+<p align="center">
+  <a href="https://github.com/Magayaga/Nanomath">
+    <img src="./assets/nanomath.svg" alt="Nanomath logo" width="200" height="165">
+  </a>
+</p>
+<h1 align="center">Nanomath</h1>
 
-**Nanomath** is a scientific calculator for cross-platform computing systems or operating environments using a **command line interface** or **text-based user interface** created and developed by Cyril John Magayaga.
+**Nanomath** (latin for Nano: Νανο) is a scientific calculator for cross-platform computing systems or operating environments using a **command line interface** or **text-based user interface** created and developed by Cyril John Magayaga.
 
 ## Getting Start
 

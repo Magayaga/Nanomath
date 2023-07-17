@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.2) / July 15, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.3) / August 3, 2023 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -33,29 +33,14 @@ IN THE SOFTWARE.
 #include <stdlib.h>
 #include "color.c"
 #include "decimal.c"
+#include "nanomath_title.c"
 
 int main() {
     char nanomath;
     double num1, num2, result;
     int decimal;
     
-
-    printf("                                 ._(+-*/)_.\n"); 
-    white(); printf("----------------------------------"); resetColor(); purple(); printf("NANOMATH"); resetColor(); white(); printf("----------------------------------\n"); resetColor();
-    printf("(+) Addition             (-) Subtraction             (*) Multiplication\n");
-    printf("(/) Division             (1) Sin                     (2) Cos\n");
-    printf("(3) Tan                  (4) Log                     (5) Pow\n");
-    printf("(6) Square Root          (7) Cube Root               (8) Exponentiation\n");
-    printf("(9) Decimal to Binary\n");
-    white();
-    printf("----------------------------------------------------------------------------\n");
-    resetColor();
-    printf("(h) Help                 (c) Copyright               (v) Version\n");
-    white();
-    printf("----------------------------------------------------------------------------\n");
-    resetColor();
-    yellow();
-    printf("Make a choice: ");
+    nanomath_title();
     resetColor();
     scanf("%c", &nanomath);
 
@@ -108,7 +93,7 @@ int main() {
             scanf("%lf", &num1);
             result = sin(num1 * M_PI / 180);
             green();
-            printf("%lf = %lf", num1, result);
+            printf("Sine of %lf = %lf", num1, result);
             break;
 
         case '2':
@@ -116,7 +101,7 @@ int main() {
             scanf("%lf", &num1);
             result = cos(num1 * M_PI / 180);
             green();
-            printf("%lf = %lf", num1, result);
+            printf("Cosine of %lf = %lf", num1, result);
             resetColor();
             break;
 
@@ -125,20 +110,32 @@ int main() {
             scanf("%lf", &num1);
             result = tan(num1 * M_PI / 180);
             green();
-            printf("%lf = %lf", num1, result);
+            printf("Tangent of %lf = %lf", num1, result);
             resetColor();
             break;
-
+        
         case '4':
-            printf("Enter operand (log): ");
+            printf("Enter the angle in radians (cot): ");
             scanf("%lf", &num1);
-            result = log10(num1);
+            double cotangent(double num1) {
+                return 1.0 / tan(num1);
+            }
+            double result = cotangent(num1);
             green();
-            printf("%lf = %lf", num1, result);
+            printf("Cotangent of %lf = %lf\n", num1, result);
             resetColor();
             break;
 
         case '5':
+            printf("Enter operand (log10): ");
+            scanf("%lf", &num1);
+            result = log10(num1);
+            green();
+            printf("Common logarithm of %lf = %lf", num1, result);
+            resetColor();
+            break;
+
+        case '6':
             printf("Enter base and exponent (pow): ");
             scanf("%lf %lf", &num1, &num2);
             result = pow(num1, num2);
@@ -147,7 +144,7 @@ int main() {
             resetColor();
             break;
         
-        case '6':
+        case '7':
             printf("Enter an number (square root): ");
             scanf("%lf", &num1);
             result = sqrt(num1);
@@ -156,7 +153,7 @@ int main() {
             resetColor();
             break;
         
-        case '7':
+        case '8':
             printf("Enter an number (cube root): ");
             scanf("%lf", &num1);
             result = cbrt(num1);
@@ -165,7 +162,7 @@ int main() {
             resetColor();
             break;
 
-        case '8':
+        case '9':
             printf("Enter an number (exponentiation): ");
             scanf("%lf", &num1);
             result = exp(num1);
@@ -174,7 +171,7 @@ int main() {
             resetColor();
             break;
         
-        case '9':
+        case '0':
             printf("Enter an number (decimal number): ");
             scanf("%d", &decimal);
             green();
@@ -189,7 +186,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(v1.2) / July 15, 2023\n");
+            printf("(v1.3) / July 17, 2023\n");
             printf("Nanomath was created and developed by Cyril John Magayaga\n");
             resetColor();
             yellow();
