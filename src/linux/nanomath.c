@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.3) / August 3, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.3) / July 17, 2023 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
