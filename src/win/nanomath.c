@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.3.1) / August 1, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.4) / August 8, 2023 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -33,6 +33,7 @@ IN THE SOFTWARE.
 #include <stdlib.h>
 #include "color.c"
 #include "decimal.c"
+#include "binary.c"
 #include "nanomath_title.c"
 
 int main() {
@@ -178,6 +179,15 @@ int main() {
             decimalToBinary(decimal);
             resetColor();
             break;
+        
+        case '#':
+            printf("Enter an number (binary number): ");
+            char binary[100];
+            scanf("%s", binary);
+            green();
+            binaryToDecimal(binary);
+            resetColor();
+            break;
 
         case 'q':
             exit(0);
@@ -186,7 +196,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(v1.3.1) / August 1, 2023\n");
+            printf("(v1.4) / August 8, 2023\n");
             printf("Nanomath was created and developed by Cyril John Magayaga\n");
             resetColor();
             yellow();

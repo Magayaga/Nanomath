@@ -2,7 +2,7 @@
 
 # Copyright 2023 Cyril John Magayaga
 
-nanomath: src/nanomath.c src/decimal.c src/color.c src/nanomath_title.c
+nanomath-all: src/nanomath.c src/decimal.c src/color.c src/nanomath_title.c
 	$(CC) -o nanomath src/nanomath.c -lm
 
 src/nanomath.c: src/linux/nanomath.c
@@ -17,5 +17,11 @@ src/decimal.c: src/linux/decimal.c
 src/nanomath_title.c: src/linux/nanomath_title.c
 	cp src/linux/nanomath_title.c src/nanomath_title.c
 
-clean:
+clean-all:
 	rm src/color.c src/decimal.c src/nanomath.c src/nanomath_title.c
+
+nanomath:
+	$(CC) -o nanomath src/linux/nanomath.c -lm
+
+clean:
+    rm nanomath 
