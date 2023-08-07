@@ -4,7 +4,7 @@ Nanomath (v1.4) / August 8, 2023 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
-Copyright (c) Cyril John Magayaga. All rights reserved.
+Copyright (c) 2023 Cyril John Magayaga. All rights reserved.
 
 MIT License
 
@@ -31,10 +31,10 @@ IN THE SOFTWARE.
 #include <math.h>
 #include <conio.h>  
 #include <stdlib.h>
-#include "color.c"
-#include "decimal.c"
-#include "binary.c"
-#include "nanomath_title.c"
+#include "color.h"
+#include "decimal.h"
+#include "binary.h"
+#include "nanomath_title.h"
 
 int main() {
     char nanomath;

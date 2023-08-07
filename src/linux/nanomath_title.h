@@ -27,23 +27,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
 
 */
-#include <string.h>
-#include <stdio.h>
-#include "color.h"
-#include "binary.h"
+#ifndef NANOMATH_TITLE_H
+#define NANOMATH_TITLE_H
 
-void binaryToDecimal(const char* binary) {
-    int decimal = 0;
-    int length = strlen(binary);
-    int base = 1;
-    for (int i = length - 1; i >= 0; i--) {
-        if (binary[i] == '1') {
-            decimal += base;
-        }
-        base *= 2;
-    }
+void nanomath_title();
 
-    green();
-    printf("Decimal: %d", decimal);
-    resetColor();
-}
+#endif

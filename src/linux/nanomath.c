@@ -30,9 +30,10 @@ IN THE SOFTWARE.
 #include <stdio.h>
 #include <math.h>  
 #include <stdlib.h>
-#include "color.c"
-#include "decimal.c"
-#include "nanomath_title.c"
+#include "color.h"
+#include "decimal.h"
+#include "binary.h"
+#include "nanomath_title.h"
 
 int main() {
     char nanomath;

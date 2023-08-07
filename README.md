@@ -5,7 +5,7 @@
 </p>
 <h1 align="center">Nanomath</h1>
 
-**Nanomath** (latin for Nano: Νανο) is a scientific calculator for cross-platform computing systems or operating environments using a **command line interface** or **text-based user interface** created and developed by Cyril John Magayaga.
+**Nanomath** (latin for Nano: Νανο) is a scientific calculator for cross-platform computing systems or operating environments using a **command line interface** or **text-based user interface** created and developed by [Cyril John Magayaga](https://github.com/magayaga).
 
 ## Getting Start
 
@@ -17,8 +17,8 @@ git clone https://github.com/Magayaga/Nanomath.git
 # Change directory the Nanomath
 cd Nanomath
 
-# Run the program
-gcc src/win/nanomath.c -o nanomath.exe
+# Run the program (bash)
+bash install-win.sh
 
 # Open the application
 ./nanomath
@@ -32,16 +32,13 @@ git clone https://github.com/Magayaga/Nanomath.git
 # Change directory the Nanomath
 cd Nanomath
 
-# Run the program (gcc)
-gcc src/linux/nanomath.c -o nanomath -lm
-
-# or (makefile)
-make
+# Run the program (bash)
+bash install-linux.sh
 
 # Open the application
 ./nanomath
 ```
-## License
+## Copyright and License
 Copyright (c) Cyril John Magayaga. All rights reserved.
 
 Licensed under the [MIT License](LICENSE).
