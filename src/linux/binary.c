@@ -29,6 +29,7 @@ IN THE SOFTWARE.
 */
 #include <string.h>
 #include <stdio.h>
+#include "color.c"
 #include "binary.h"
 
 void binaryToDecimal(const char* binary) {

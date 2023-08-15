@@ -28,6 +28,7 @@ IN THE SOFTWARE.
 
 */
 #include <stdio.h>
+#include "color.h"
 #include "decimal.h"
 
 void decimalToBinary(int decimal) {

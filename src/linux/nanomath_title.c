@@ -28,6 +28,7 @@ IN THE SOFTWARE.
 
 */
 #include <stdio.h>
+#include "color.h"
 #include "nanomath_title.h"
 
 void nanomath_title() {
