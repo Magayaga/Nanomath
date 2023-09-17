@@ -1,10 +1,10 @@
 /*
 
-Nanomath (v1.4) / August 8, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.4.1) / September 17, 2023 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
-Copyright (c) Cyril John Magayaga. All rights reserved.
+Copyright (c) 2023 Cyril John Magayaga. All rights reserved.
 
 MIT License
 
@@ -190,7 +190,17 @@ int main() {
             binaryToDecimal(binary);
             resetColor();
             break;
+        
+        case 'r':
+            printf("Enter an number (round): ");
+            scanf("%lf", &num1);
+            result = round(num1);
+            green();
+            printf("%lf = %lf\n", num1, result);
+            resetColor();
+            break;
 
+        case 'Q':
         case 'q':
             exit(0);
             break;
@@ -198,7 +208,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(v1.4) / August 8, 2023\n");
+            printf("(v1.4.1) / September 17, 2023\n");
             printf("Nanomath was created and developed by Cyril John Magayaga\n");
             resetColor();
             yellow();
