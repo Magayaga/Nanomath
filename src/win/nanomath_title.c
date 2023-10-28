@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.4.1) / September 17, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.4.2) / October 31, 2023 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ void nanomath_title() {
     printf("(3) Tangent              (4) Cotangent               (5) Common Logarithm\n");
     printf("(6) Pow                  (7) Square Root             (8) Cube Root\n");
     printf("(9) Exponentiation       (0) Decimal to Binary       (#) Binary to Decimal\n");
-    printf("(r) Round\n");
+    printf("(r) Round                (e) Ceil                    (f) Floor\n");
     white();
     printf("----------------------------------------------------------------------------\n");
     resetColor();

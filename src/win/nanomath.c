@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.4.1) / September 17, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.4.2) / October 31, 2023 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -197,6 +197,24 @@ int main() {
             printf("%lf = %lf\n", num1, result);
             resetColor();
             break;
+        
+        case 'e':
+            printf("Enter an number (ceil): ");
+            scanf("%lf", &num1);
+            result = ceil(num1);
+            green();
+            printf("%lf = %lf\n", num1, result);
+            resetColor();
+            break;
+        
+        case 'f':
+            printf("Enter an number (floor): ");
+            scanf("%lf", &num1);
+            result = floor(num1);
+            green();
+            printf("%lf = %lf\n", num1, result);
+            resetColor();
+            break;
 
         case 'Q':
         case 'q':
@@ -206,7 +224,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(v1.4) / August 8, 2023\n");
+            printf("(v1.4.2) / October 31, 2023\n");
             printf("Nanomath was created and developed by Cyril John Magayaga\n");
             resetColor();
             yellow();
