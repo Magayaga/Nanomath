@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.4.2) / October 31, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.4.3) / November 25, 2023 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -34,6 +34,9 @@ IN THE SOFTWARE.
 #include "decimal.h"
 #include "binary.h"
 #include "nanomath_title.h"
+
+// Function Declarations
+double cotangent(double num);
 
 int main() {
     char nanomath;
@@ -120,10 +123,7 @@ int main() {
         case '4':
             printf("Enter the angle in radians (cot): ");
             scanf("%lf", &num1);
-            double cotangent(double num1) {
-                return 1.0 / tan(num1);
-            }
-            double result = cotangent(num1);
+            result = cotangent(num1);
             green();
             printf("Cotangent of %lf = %lf\n", num1, result);
             resetColor();
@@ -226,7 +226,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(v1.4.2) / October 31, 2023\n");
+            printf("(v1.4.3) / November 25, 2023\n");
             printf("Nanomath was created and developed by Cyril John Magayaga\n");
             resetColor();
             yellow();
@@ -256,4 +256,9 @@ int main() {
             resetColor();
     }
     return 0;
+}
+
+// Function Definitions
+double cotangent(double num) {
+    return 1.0 / tan(num);
 }
