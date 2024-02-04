@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.4.1) / September 17, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.5) / February 29, 2024 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -48,7 +48,7 @@ void nanomath_title() {
     printf("----------------------------------------------------------------------------\n");
     resetColor();
     blue();
-    printf("Copyright (c) 2023 Cyril John Magayaga\n");
+    printf("Copyright (c) 2023-2024 Cyril John Magayaga\n");
     resetColor();
     white();
     printf("----------------------------------------------------------------------------\n");

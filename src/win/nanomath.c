@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.4.3) / November 25, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.5) / February 29, 2024 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -224,7 +224,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(v1.4.3) / November 25, 2023\n");
+            printf("(v1.5) / February 29, 2024\n");
             printf("Nanomath was created and developed by Cyril John Magayaga\n");
             resetColor();
             yellow();
@@ -235,7 +235,7 @@ int main() {
         case 'c':
         case 'C':
             blue();
-            printf("Copyright 2023 Cyril John Magayaga\n");
+            printf("Copyright 2023-2024 Cyril John Magayaga\n");
             resetColor();
             break;
         
