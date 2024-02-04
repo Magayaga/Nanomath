@@ -35,6 +35,11 @@ IN THE SOFTWARE.
 #include "decimal.h"
 #include "binary.h"
 #include "nanomath_title.h"
+#include "gamma.h"
+#include "quadratic.h"
+#include "demand.h"
+
+#define NANOMATH_VERSION "v1.5"
 
 // Function Declarations
 double cotangent(double num);
@@ -215,6 +220,63 @@ int main() {
             printf("%lf = %lf\n", num1, result);
             resetColor();
             break;
+        
+        case 'g':
+            printf("Enter a number (gamma function): ");
+            scanf("%lf", &num1);
+            result = gammaFunction(num1);
+            if (!isnan(result)) {
+                green();
+                printf("Gamma function of %lf = %lf", num1, result);
+                resetColor();
+            }
+            else {
+                printf("Error: Gamma function is undefined for the given input");
+            }
+            break;
+        
+        case 'u':
+            printf("Enter coefficients a, b, and c (quadratic equation): ");
+            double num3;
+            scanf("%lf %lf %lf", &num1, &num2, &num3);
+            QuadraticResult quadraticResult = solveQuadratic(num1, num2, num3);
+            
+            green();
+            if (quadraticResult.numRoots == 2) {
+                printf("Roots: %lf, %lf", quadraticResult.root1, quadraticResult.root2);
+            }
+            else if (quadraticResult.numRoots == 1) {
+                printf("Root: %lf", quadraticResult.root1);
+            }
+            else {
+                printf("Complex roots: non-real values");
+            }
+            resetColor();
+            break;
+        
+        case 'd':
+            printf("Enter the number of demand points: ");
+            int numDemandPoints;
+            scanf("%d", &numDemandPoints);
+            
+            DemandFunction demand = createDemandFunction(numDemandPoints);
+            
+            for (int i = 0; i < numDemandPoints; i++) {
+                printf("Enter price and quantity for point %d: ", i + 1);
+                double price, quantity;
+                scanf("%lf %lf", &price, &quantity);
+                addDemandPoint(&demand, price, quantity);
+            }
+            
+            int startIndex, endIndex;
+            printf("Enter start and end indices for elasticity calculation: ");
+            scanf("%d %d", &startIndex, &endIndex);
+            
+            double elasticity = calculateElasticity(demand, startIndex, endIndex);
+            green();
+            printf("Elasticity between points %d and %d: %lf", startIndex, endIndex, elasticity);
+            resetColor();
+            break;
 
         case 'Q':
         case 'q':
@@ -224,7 +286,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(v1.5) / February 29, 2024\n");
+            printf("(%s) / February 29, 2024\n", NANOMATH_VERSION);
             printf("Nanomath was created and developed by Cyril John Magayaga\n");
             resetColor();
             yellow();

@@ -218,6 +218,39 @@ int main() {
             resetColor();
             break;
 
+        case 'g':
+            printf("Enter a number (gamma function): ");
+            scanf("%lf", &num1);
+            result = gammaFunction(num1);
+            if (!isnan(result)) {
+                green();
+                printf("Gamma function of %lf = %lf", num1, result);
+                resetColor();
+            }
+            else {
+                printf("Error: Gamma function is undefined for the given input");
+            }
+            break;
+        
+        case 'u':
+            printf("Enter coefficients a, b, and c (quadratic equation): ");
+            double num3;
+            scanf("%lf %lf %lf", &num1, &num2, &num3);
+            QuadraticResult quadraticResult = solveQuadratic(num1, num2, num3);
+            
+            green();
+            if (quadraticResult.numRoots == 2) {
+                printf("Roots: %lf, %lf", quadraticResult.root1, quadraticResult.root2);
+            }
+            else if (quadraticResult.numRoots == 1) {
+                printf("Root: %lf", quadraticResult.root1);
+            }
+            else {
+                printf("Complex roots: non-real values");
+            }
+            resetColor();
+            break;
+
         case 'Q':
         case 'q':
             exit(0);

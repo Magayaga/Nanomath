@@ -40,6 +40,7 @@ void nanomath_title() {
     printf("(6) Pow                  (7) Square Root             (8) Cube Root\n");
     printf("(9) Exponentiation       (0) Decimal to Binary       (#) Binary to Decimal\n");
     printf("(r) Round                (e) Ceil                    (f) Floor\n");
+    printf("(g) Gamma function       (u) Quadratic equation      (d) demand function \n");
     white();
     printf("----------------------------------------------------------------------------\n");
     resetColor();

@@ -1,4 +1,2 @@
-# Pre-preview release
-# install-win.sh
-# install-linux.sh
-# makefile
+# Applications
+*.exe
