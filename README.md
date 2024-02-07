@@ -17,8 +17,9 @@ git clone https://github.com/Magayaga/Nanomath.git
 # Change directory the Nanomath
 cd Nanomath
 
-# Run the program (bash)
+# Run the program (bash or make.bat)
 bash install-win.sh
+./make.bat
 
 # Open the application
 ./nanomath
@@ -32,8 +33,9 @@ git clone https://github.com/Magayaga/Nanomath.git
 # Change directory the Nanomath
 cd Nanomath
 
-# Run the program (bash)
+# Run the program (bash or make)
 bash install-linux.sh
+make install
 
 # Open the application
 ./nanomath
