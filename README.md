@@ -12,33 +12,35 @@
 ### Windows
 ```shell
 # Download the Nanomath
-git clone https://github.com/Magayaga/Nanomath.git
+$ git clone
+$ https://github.com/Magayaga/Nanomath.git
 
 # Change directory the Nanomath
-cd Nanomath
+$ cd Nanomath
 
 # Run the program (bash or make.bat)
-bash install-win.sh
-./make.bat
+$ bash install-win.sh
+$ ./make.bat
 
 # Open the application
-./nanomath
+$ ./nanomath
 ```
 
 ### Linux
 ```shell
 # Download the Nanomath
-git clone https://github.com/Magayaga/Nanomath.git
+$ git clone
+$ https://github.com/Magayaga/Nanomath.git
 
 # Change directory the Nanomath
-cd Nanomath
+$ cd Nanomath
 
 # Run the program (bash or make)
-bash install-linux.sh
-make install
+$ bash install-linux.sh
+$ make install
 
 # Open the application
-./nanomath
+$ ./nanomath
 ```
 ## Copyright and License
 Copyright (c) Cyril John Magayaga. All rights reserved.
