@@ -33,6 +33,7 @@ IN THE SOFTWARE.
 #include "color.h"
 #include "decimal.h"
 #include "binary.h"
+#include "quadratic.h"
 #include "nanomath_title.h"
 
 // Function Declarations
