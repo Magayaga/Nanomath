@@ -28,12 +28,17 @@ IN THE SOFTWARE.
 
 */
 #include <stdio.h>
-#include <math.h>  
+#include <math.h>
 #include <stdlib.h>
 #include "color.h"
 #include "decimal.h"
 #include "binary.h"
 #include "nanomath_title.h"
+#include "gamma.h"
+#include "quadratic.h"
+#include "demand.h"
+
+#define NANOMATH_VERSION "v1.5"
 
 // Function Declarations
 double cotangent(double num);
@@ -56,7 +61,7 @@ int main() {
             scanf("%lf %lf", &num1, &num2);
             result = num1 + num2;
             green();
-            printf("%lf + %lf = %lf\n", num1, num2, result);
+            printf("%lf + %lf = %lf", num1, num2, result);
             resetColor();
             break;
 
@@ -65,7 +70,7 @@ int main() {
             scanf("%lf %lf", &num1, &num2);
             result = num1 - num2;
             green();
-            printf("%lf - %lf = %lf\n", num1, num2, result);
+            printf("%lf - %lf = %lf", num1, num2, result);
             resetColor();
             break;
 
@@ -74,7 +79,7 @@ int main() {
             scanf("%lf %lf", &num1, &num2);
             result = num1 * num2;
             green();
-            printf("%lf * %lf = %lf\n", num1, num2, result);
+            printf("%lf * %lf = %lf", num1, num2, result);
             resetColor();
             break;
 
@@ -89,7 +94,7 @@ int main() {
             else {
                 result = num1 / num2;
                 green();
-                printf("%lf / %lf = %lf\n", num1, num2, result);
+                printf("%lf / %lf = %lf", num1, num2, result);
                 resetColor();
             }
             break;
@@ -99,7 +104,7 @@ int main() {
             scanf("%lf", &num1);
             result = sin(num1 * M_PI / 180);
             green();
-            printf("%lf = %lf\n", num1, result);
+            printf("Sine of %lf = %lf", num1, result);
             break;
 
         case '2':
@@ -107,7 +112,7 @@ int main() {
             scanf("%lf", &num1);
             result = cos(num1 * M_PI / 180);
             green();
-            printf("%lf = %lf\n", num1, result);
+            printf("Cosine of %lf = %lf", num1, result);
             resetColor();
             break;
 
@@ -116,7 +121,7 @@ int main() {
             scanf("%lf", &num1);
             result = tan(num1 * M_PI / 180);
             green();
-            printf("%lf = %lf\n", num1, result);
+            printf("Tangent of %lf = %lf", num1, result);
             resetColor();
             break;
         
@@ -130,11 +135,11 @@ int main() {
             break;
 
         case '5':
-            printf("Enter operand (log): ");
+            printf("Enter operand (log10): ");
             scanf("%lf", &num1);
             result = log10(num1);
             green();
-            printf("%lf = %lf\n", num1, result);
+            printf("Common logarithm of %lf = %lf", num1, result);
             resetColor();
             break;
 
@@ -143,7 +148,7 @@ int main() {
             scanf("%lf %lf", &num1, &num2);
             result = pow(num1, num2);
             green();
-            printf("%lf = %lf\n", num1, result);
+            printf("%lf = %lf", num1, result);
             resetColor();
             break;
         
@@ -152,7 +157,7 @@ int main() {
             scanf("%lf", &num1);
             result = sqrt(num1);
             green();
-            printf("square root of %lf = %lf\n", num1, result);
+            printf("square root of %lf = %lf", num1, result);
             resetColor();
             break;
         
@@ -161,7 +166,7 @@ int main() {
             scanf("%lf", &num1);
             result = cbrt(num1);
             green();
-            printf("square root of %lf = %lf\n", num1, result);
+            printf("square root of %lf = %lf", num1, result);
             resetColor();
             break;
 
@@ -170,7 +175,7 @@ int main() {
             scanf("%lf", &num1);
             result = exp(num1);
             green();
-            printf("exponential of %lf = %lf\n", num1, result);
+            printf("exponential of %lf = %lf", num1, result);
             resetColor();
             break;
         
@@ -217,7 +222,7 @@ int main() {
             printf("%lf = %lf\n", num1, result);
             resetColor();
             break;
-
+        
         case 'g':
             printf("Enter a number (gamma function): ");
             scanf("%lf", &num1);
@@ -250,6 +255,30 @@ int main() {
             }
             resetColor();
             break;
+        
+        case 'd':
+            printf("Enter the number of demand points: ");
+            int numDemandPoints;
+            scanf("%d", &numDemandPoints);
+            
+            DemandFunction demand = createDemandFunction(numDemandPoints);
+            
+            for (int i = 0; i < numDemandPoints; i++) {
+                printf("Enter price and quantity for point %d: ", i + 1);
+                double price, quantity;
+                scanf("%lf %lf", &price, &quantity);
+                addDemandPoint(&demand, price, quantity);
+            }
+            
+            int startIndex, endIndex;
+            printf("Enter start and end indices for elasticity calculation: ");
+            scanf("%d %d", &startIndex, &endIndex);
+            
+            double elasticity = calculateElasticity(demand, startIndex, endIndex);
+            green();
+            printf("Elasticity between points %d and %d: %lf", startIndex, endIndex, elasticity);
+            resetColor();
+            break;
 
         case 'Q':
         case 'q':
@@ -259,7 +288,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(v1.5) / February 29, 2024\n");
+            printf("(%s) / February 29, 2024\n", NANOMATH_VERSION);
             printf("Nanomath was created and developed by Cyril John Magayaga\n");
             resetColor();
             yellow();
