@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.5) / February 29, 2024 - created and developed by Cyril John Magayaga
+Nanomath (v1.5.1) / March 30, 2024 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ IN THE SOFTWARE.
 #include "quadratic.h"
 #include "demand.h"
 
-#define NANOMATH_VERSION "v1.5"
+#define NANOMATH_VERSION "v1.5.1"
 
 // Function Declarations
 double cotangent(double num);
@@ -286,7 +286,7 @@ int main() {
         case 'v':
         case 'V':
             blue();
-            printf("(%s) / February 29, 2024\n", NANOMATH_VERSION);
+            printf("(%s) / March 30, 2024\n", NANOMATH_VERSION);
             printf("Nanomath was created and developed by Cyril John Magayaga\n");
             resetColor();
             yellow();

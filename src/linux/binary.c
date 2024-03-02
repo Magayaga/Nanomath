@@ -44,6 +44,6 @@ void binaryToDecimal(const char* binary) {
     }
 
     green();
-    printf("Decimal: %d", decimal);
+    printf("Decimal: %d\n", decimal);
     resetColor();
 }

@@ -44,7 +44,7 @@ void decimalToBinary(int decimal) {
     printf("Binary: ");
     green();
     for (int j = i - 1; j >= 0; j--) {
-        printf("%d", binary[j]);
+        printf("%d\n", binary[j]);
     }
     printf("\n");
 }
