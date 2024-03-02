@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.5) / February 29, 2024 - created and developed by Cyril John Magayaga
+Nanomath (v1.5.1) / March 30, 2024 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -34,11 +34,9 @@ IN THE SOFTWARE.
 #include "decimal.h"
 #include "demand.h"
 #include "binary.h"
-#include "quadratic.h"
-#include "nanomath_title.h"
 #include "gamma.h"
 #include "quadratic.h"
-#include "demand.h"
+#include "nanomath_title.h"
 
 #define NANOMATH_VERSION "v1.5"
 
@@ -90,7 +88,7 @@ int main() {
             scanf("%lf %lf", &num1, &num2);
             if(num2 == 0) {
                 red();
-                printf("Error: Division by zero");
+                printf("Error: Division by zero\n");
                 resetColor();
             }
             else {
@@ -141,7 +139,7 @@ int main() {
             scanf("%lf", &num1);
             result = log10(num1);
             green();
-            printf("Common logarithm of %lf = %lf", num1, result);
+            printf("Common logarithm of %lf = %lf\n", num1, result);
             resetColor();
             break;
 
@@ -150,7 +148,7 @@ int main() {
             scanf("%lf %lf", &num1, &num2);
             result = pow(num1, num2);
             green();
-            printf("%lf = %lf", num1, result);
+            printf("%lf = %lf\n", num1, result);
             resetColor();
             break;
         
@@ -159,7 +157,7 @@ int main() {
             scanf("%lf", &num1);
             result = sqrt(num1);
             green();
-            printf("square root of %lf = %lf", num1, result);
+            printf("square root of %lf = %lf\n", num1, result);
             resetColor();
             break;
         
@@ -168,7 +166,7 @@ int main() {
             scanf("%lf", &num1);
             result = cbrt(num1);
             green();
-            printf("square root of %lf = %lf", num1, result);
+            printf("square root of %lf = %lf\n", num1, result);
             resetColor();
             break;
 
@@ -177,7 +175,7 @@ int main() {
             scanf("%lf", &num1);
             result = exp(num1);
             green();
-            printf("exponential of %lf = %lf", num1, result);
+            printf("exponential of %lf = %lf\n", num1, result);
             resetColor();
             break;
         
@@ -231,7 +229,7 @@ int main() {
             result = gammaFunction(num1);
             if (!isnan(result)) {
                 green();
-                printf("Gamma function of %lf = %lf", num1, result);
+                printf("Gamma function of %lf = %lf\n", num1, result);
                 resetColor();
             }
             else {
@@ -247,13 +245,13 @@ int main() {
             
             green();
             if (quadraticResult.numRoots == 2) {
-                printf("Roots: %lf, %lf", quadraticResult.root1, quadraticResult.root2);
+                printf("Roots: %lf, %lf\n", quadraticResult.root1, quadraticResult.root2);
             }
             else if (quadraticResult.numRoots == 1) {
-                printf("Root: %lf", quadraticResult.root1);
+                printf("Root: %lf\n", quadraticResult.root1);
             }
             else {
-                printf("Complex roots: non-real values");
+                printf("Complex roots: non-real values\n");
             }
             resetColor();
             break;
@@ -278,7 +276,7 @@ int main() {
             
             double elasticity = calculateElasticity(demand, startIndex, endIndex);
             green();
-            printf("Elasticity between points %d and %d: %lf", startIndex, endIndex, elasticity);
+            printf("Elasticity between points %d and %d: %lf\n", startIndex, endIndex, elasticity);
             resetColor();
             break;
 
