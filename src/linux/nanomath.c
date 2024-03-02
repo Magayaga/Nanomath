@@ -32,7 +32,9 @@ IN THE SOFTWARE.
 #include <stdlib.h>
 #include "color.h"
 #include "decimal.h"
+#include "demand.h"
 #include "binary.h"
+#include "quadratic.h"
 #include "nanomath_title.h"
 #include "gamma.h"
 #include "quadratic.h"
