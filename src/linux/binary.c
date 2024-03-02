@@ -1,6 +1,6 @@
 /*
 
-Nanomath (v1.4) / August 8, 2023 - created and developed by Cyril John Magayaga
+Nanomath (v1.5.1) / March 30, 2024 - created and developed by Cyril John Magayaga
 
 ------------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@ IN THE SOFTWARE.
 */
 #include <string.h>
 #include <stdio.h>
-#include "color.c"
+#include "color.h"
 #include "binary.h"
 
 void binaryToDecimal(const char* binary) {
