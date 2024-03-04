@@ -28,15 +28,16 @@
 | Round | <kbd>r</kbd> |
 | Ceil | <kbd>c</kbd> |
 | Floor | <kbd>f</kbd> |
-| Gamma Function | <kbd>f</kbd> |
+| Gamma Function | <kbd>g</kbd> |
+| Quadratic Equation | <kbd>u</kbd> |
+| Demand Function | <kbd>d</kbd> |
 
 ## Getting Start
 
 ### Windows
 ```shell
 # Download the Nanomath
-$ git clone
-$ https://github.com/Magayaga/Nanomath.git
+$ git clone https://github.com/Magayaga/Nanomath.git
 
 # Change directory the Nanomath
 $ cd Nanomath
@@ -52,8 +53,7 @@ $ ./nanomath
 ### Linux
 ```shell
 # Download the Nanomath
-$ git clone
-$ https://github.com/Magayaga/Nanomath.git
+$ git clone https://github.com/Magayaga/Nanomath.git
 
 # Change directory the Nanomath
 $ cd Nanomath
