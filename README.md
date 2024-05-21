@@ -7,6 +7,8 @@
 
 **Nanomath** (latin for Nano: Νανο) is a scientific calculator for cross-platform computing systems or operating environments using a **command line interface** or **text-based user interface** created and developed by [Cyril John Magayaga](https://github.com/magayaga).
 
+On May 21, 2024, [Cyril John Magayaga](https://github.com/magayaga) announced that the Nanomath was succeeded by [Attomath](https://github.com/magayaga/attomath), it was written in **C** programming language.
+
 ## Nanomath keywords
 | Name | Keys |
 |:----:|:--------:|
