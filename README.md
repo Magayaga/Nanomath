@@ -66,6 +66,7 @@ $ make install
 $ ./nanomath
 ```
 ## Copyright and License
-Copyright (c) Cyril John Magayaga. All rights reserved.
+Copyright (c) 2023–2026 Cyril John Magayaga. All rights reserved.
 
 Licensed under the [MIT License](LICENSE).
+
